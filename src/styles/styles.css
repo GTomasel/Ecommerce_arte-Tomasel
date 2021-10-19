@@ -18,10 +18,14 @@ html, body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+nav svg {
+    align-self: center;
+}
+
 a {
-    font-style: none;
+    text-decoration: none;
     color: #fff;
-    margin: 1rem;
+    padding: 1rem;
 }
 
 footer p{

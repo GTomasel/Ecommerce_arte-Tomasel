@@ -1,13 +1,15 @@
 import Header from "./Header"
+import Footer from "./Footer"
+import ItemListContainer from "./ItemListContainer"
+
 
 
 const App = () => {
     return(
         <>
-            <Header/>
-            <footer>
-                <p>Footer</p>
-            </footer>
+            <Header nombre="Gabriel" apellido="Tomasel"/>
+            <ItemListContainer greeting="Bienvenido!!!"/>
+            <Footer/>
         </>
     )
 }
