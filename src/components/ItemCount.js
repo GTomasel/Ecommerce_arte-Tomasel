@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react'
+import { useState} from 'react'
 import { AiOutlineMinusCircle } from 'react-icons/ai';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 
