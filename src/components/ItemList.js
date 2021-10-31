@@ -27,7 +27,7 @@ export default function ItemList({ items }) {
                     {products.map((e, i) => {
                         return (
                             <>
-                                <Item title={e.title} description={e.description} price={e.price} pictureUrl={e.pictureUrl} />
+                                <Item id={e.id} title={e.title} description={e.description} price={e.price} pictureUrl={e.pictureUrl} />
                             </>
                         );
                     })}

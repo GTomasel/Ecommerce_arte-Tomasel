@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import ItemList from "./ItemList"
-import ItemCount from "./ItemCount"
+//import ItemCount from "./ItemCount"
 import productsJSON from "../products.json"
 
 
@@ -31,7 +31,7 @@ const ItemListContainer = ({ greeting }) => {
         <>
             <p className="p-3">{greeting}</p>
             <ItemList items={datos} />
-            <ItemCount stock={10} initial={1} onAdd={function () { console.log("") }} />
+            {/* <ItemCount stock={10} initial={1} onAdd={function () { console.log("") }} /> */}
         </>
     )
 }
