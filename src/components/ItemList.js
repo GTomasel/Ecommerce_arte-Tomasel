@@ -3,12 +3,12 @@ import Item from "./Item"
 
 
 export default function ItemList({ items }) {
-    const [products, setProducts] = useState([]);
 
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
             setProducts(items);
-    }, []);
+    }, [items]);
 
     if (products.length === 0) {
         return (

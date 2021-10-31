@@ -4,22 +4,27 @@ import ItemCount from "./ItemCount"
 import productsJSON from "../products.json"
 
 
+
+
 const ItemListContainer = ({ greeting }) => {
 
     const [datos, setDatos] = useState([])
 
-    const promesa = new Promise((res) => {
-        setTimeout(() => {
-            res(productsJSON)
-        }, 2000)
+    useEffect(() => {
 
+        const promesa = new Promise((res) => {
+            setTimeout(() => {
+                res(productsJSON)
+            }, 2000)
+
+        })
+
+        
+        promesa.then((data) => {
+            setDatos(data)
+        })
+        
     })
-
-    console.log(promesa)
-
-    promesa.then((data) => {
-        setDatos(data)
-    })    
 
 
     return (
