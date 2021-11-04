@@ -1,5 +1,5 @@
-import { AiOutlineMinusCircle } from 'react-icons/ai';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
+import ItemCount from "./ItemCount"
+
 
 const Item = ({ detail }) => {
 
@@ -14,7 +14,7 @@ const Item = ({ detail }) => {
         )
     } else {
         return (
-            <div>
+            <div div className="mx-5">
                 <h3 className="mx-3 mb-1 mt-5">Detalle de item</h3>
                 <div className="d-flex">
                     <div className="text-white bg-dark d-flex flex-column mt-4 mx-4 align-items-center">
@@ -25,10 +25,7 @@ const Item = ({ detail }) => {
                             <span>Precio: {detail.price}</span>
                         </div>
                         <div className="p-3">
-                            <p>Stock: 10</p>
-                            <button className="m-1" ><AiOutlineMinusCircle /></button>
-                            <button className="m-1" ><AiOutlinePlusCircle /></button>
-                            <button className="mx-3" >Agregar al carrito</button>
+                            <ItemCount stock={10} initial={1} onAdd={function () { console.log("") }} />
                         </div>
                     </div>
                 </div>

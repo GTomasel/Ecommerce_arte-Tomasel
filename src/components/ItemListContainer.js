@@ -1,12 +1,9 @@
 import { useState, useEffect } from 'react'
 import ItemList from "./ItemList"
-//import ItemCount from "./ItemCount"
 import productsJSON from "../products.json"
 
 
-
-
-const ItemListContainer = ({ greeting }) => {
+const ItemListContainer = () => {
 
     const [datos, setDatos] = useState([])
 
@@ -18,7 +15,6 @@ const ItemListContainer = ({ greeting }) => {
             }, 2000)
 
         })
-
         
         promesa.then((data) => {
             setDatos(data)
@@ -29,9 +25,7 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <>
-            <p className="p-3">{greeting}</p>
             <ItemList items={datos} />
-            {/* <ItemCount stock={10} initial={1} onAdd={function () { console.log("") }} /> */}
         </>
     )
 }

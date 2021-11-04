@@ -1,23 +1,50 @@
 [
     {
         "id": 1,
-        "title": "Cuadro 1",
+        "category" : "pintura",
+        "title": "Pintura 1",
         "description": "Lorem ipsum",
         "price": 99,
         "pictureUrl": "http://placehold.it/180x180"
     },
     {
         "id": 2,
-        "title": "Cuadro 2",
+        "category" : "pintura",
+        "title": "Pintura 2",
         "description": "Lorem ipsum",
-        "price": 99,
+        "price": 88,
         "pictureUrl": "http://placehold.it/180x180"
     },
     {
         "id": 3,
-        "title": "Cuadro 3",
+        "category" : "pintura",
+        "title": "Pintura 3",
         "description": "Lorem ipsum",
-        "price": 99,
+        "price": 50,
+        "pictureUrl": "http://placehold.it/180x180"
+    },
+    {
+        "id": 4,
+        "category" : "dibujo",
+        "title": "Dibujo 4",
+        "description": "Lorem ipsum",
+        "price": 200,
+        "pictureUrl": "http://placehold.it/180x180"
+    },
+    {
+        "id": 5,
+        "category" : "dibujo",
+        "title": "Dibujo 5",
+        "description": "Lorem ipsum",
+        "price": 150,
+        "pictureUrl": "http://placehold.it/180x180"
+    },
+    {
+        "id": 6,
+        "category" : "dibujo",
+        "title": "Dibujo 6",
+        "description": "Lorem ipsum",
+        "price": 75,
         "pictureUrl": "http://placehold.it/180x180"
     }
 ]
