@@ -18,6 +18,14 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
+.logo{
+  width: 9rem;
+}
+
+.card{
+  min-width: 223px;
+}
+
 nav svg {
   align-self: center;
 }

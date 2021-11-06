@@ -8,7 +8,7 @@ const Header = ({ nombre, apellido }) => {
         <>
             <header className="d-flex" id="header">
                 <NavLink to="/" exact>
-                    <h1 className="mx-4">Galería de Arte</h1>
+                    <img className="logo mx-4 mt-1" src='/logo.png' alt="logo"/>
                 </NavLink>
                 <NavBar links={["Inicio", "Pinturas", "Dibujos"]} />
             </header>
