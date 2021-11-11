@@ -1,22 +1,30 @@
 import ItemCount from "./ItemCount"
 import { useState } from 'react'
+import { useContext } from 'react'
+import { cartContext } from './cartContext'
 
 
 
-const ItemDetail = ({ detail }) => {
+const ItemDetail = ({ productDetail }) => {
 
     const [stock, setStock] = useState(10)
     const [visible, setVisible] = useState(true)
 
-
+    const { addToCart } = useContext(cartContext)
+    
     const amountFromCounter = (amount) => {
         if (stock >= amount) {
+
             setStock(stock - amount)
             setVisible(false)
+
+            addToCart(productDetail, amount)
         }
+
+
     }
 
-    if (detail.length === 0) {
+    if (productDetail.length === 0) {
         return (
             <>
                 <div className="d-flex mx-3 align-items-center">
@@ -31,11 +39,11 @@ const ItemDetail = ({ detail }) => {
                 <h3 className="mx-3 mb-1 mt-5">Detalle de item</h3>
                 <div className="d-flex">
                     <div className="text-white bg-dark d-flex flex-column mt-4 mx-4 align-items-center card">
-                        <div className="card-header">{detail.title}</div>
-                        <img src={detail.pictureUrl} alt="Foto del producto" />
+                        <div className="card-header">{productDetail.title}</div>
+                        <img src={productDetail.pictureUrl} alt="Foto del producto" />
                         <div className="card-body d-flex flex-column align-items-center">
-                            <span>Detalles: {detail.description}</span>
-                            <span>Precio: {detail.price}</span>
+                            <span>Detalles: {productDetail.description}</span>
+                            <span>Precio: {productDetail.price}</span>
                             <p>Stock {stock} unidades</p>
                         </div>
                         <div className="p-3">

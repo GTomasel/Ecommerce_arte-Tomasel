@@ -6,7 +6,7 @@ import GetItems from "./GetItems"
 
 const ItemDetailContainer = () => {
 
-    const [datosDetail, setDatosDetail] = useState([])
+    const [productDetail, setProductDetail] = useState([])
 
     const { id } = useParams()
 
@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
 
         GetItems.then((data) => {
             const found = data.find(e => e.id === parseInt(id))
-            setDatosDetail(found)
+            setProductDetail(found)
         })
 
     })
@@ -22,7 +22,7 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <ItemDetail detail={datosDetail} />
+            <ItemDetail productDetail={productDetail} />
         </>
     )
 }
