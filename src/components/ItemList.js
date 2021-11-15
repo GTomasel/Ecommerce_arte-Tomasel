@@ -32,7 +32,7 @@ export default function ItemList({ items }) {
         return(
             <div className="mx-5">
                 <h1 className="mx-3 mb-4">Galería filtrada</h1>
-                <div className="d-flex">
+                <div className="d-flex flex-wrap">
                     {filterCategory.map((e, i) => {
                         return (
                             <>
@@ -47,7 +47,7 @@ export default function ItemList({ items }) {
         return (
             <div className="mx-5">
                 <h1 className="mx-3 mb-4">Galería</h1>
-                <div className="d-flex">
+                <div className="d-flex flex-wrap">
                     {products.map((e, i) => {
                         return (
                             <>

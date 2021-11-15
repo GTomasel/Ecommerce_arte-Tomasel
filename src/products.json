@@ -4,53 +4,99 @@
         "category" : "pintura",
         "title": "Pintura 1",
         "description": "Lorem ipsum",
-        "price": 99,
-        "pictureUrl": "http://placehold.it/180x180",
-        "stock" : 10
+        "price": 100,
+        "pictureUrl": "https://i.postimg.cc/d3XWDfsv/1985-1.jpg",
+        "stock" : 10,
+        "qty" : 0
     },
     {
         "id": 2,
         "category" : "pintura",
         "title": "Pintura 2",
         "description": "Lorem ipsum",
-        "price": 88,
-        "pictureUrl": "http://placehold.it/180x180",
-        "stock" : 10
+        "price": 120,
+        "pictureUrl": "https://i.postimg.cc/vmM01fs1/1985-3.jpg",
+        "stock" : 10,
+        "qty" : 0
     },
     {
         "id": 3,
         "category" : "pintura",
         "title": "Pintura 3",
         "description": "Lorem ipsum",
-        "price": 50,
-        "pictureUrl": "http://placehold.it/180x180",
-        "stock" : 10
+        "price": 150,
+        "pictureUrl": "https://i.postimg.cc/zBGp7N38/1985-4.jpg",
+        "stock" : 10,
+        "qty" : 0
     },
     {
         "id": 4,
-        "category" : "dibujo",
-        "title": "Dibujo 4",
+        "category" : "pintura",
+        "title": "Pintura 4",
         "description": "Lorem ipsum",
-        "price": 200,
-        "pictureUrl": "http://placehold.it/180x180",
-        "stock" : 10
+        "price": 180,
+        "pictureUrl": "https://i.postimg.cc/J4D6SRxh/1987-a-1.jpg",
+        "stock" : 10,
+        "qty" : 0
     },
     {
         "id": 5,
-        "category" : "dibujo",
-        "title": "Dibujo 5",
+        "category" : "pintura",
+        "title": "Pintura 5",
         "description": "Lorem ipsum",
-        "price": 150,
-        "pictureUrl": "http://placehold.it/180x180",
-        "stock" : 10
+        "price": 200,
+        "pictureUrl": "https://i.postimg.cc/mrw87kLm/1987-a-2.jpg",
+        "stock" : 10,
+        "qty" : 0
     },
     {
         "id": 6,
         "category" : "dibujo",
-        "title": "Dibujo 6",
+        "title": "Dibujo 1",
         "description": "Lorem ipsum",
-        "price": 75,
-        "pictureUrl": "http://placehold.it/180x180",
-        "stock" : 10
+        "price": 80,
+        "pictureUrl": "https://i.postimg.cc/WzD8R7My/2015-12.jpg",
+        "stock" : 10,
+        "qty" : 0
+    },
+    {
+        "id": 7,
+        "category" : "dibujo",
+        "title": "Dibujo 2",
+        "description": "Lorem ipsum",
+        "price": 70,
+        "pictureUrl": "https://i.postimg.cc/Hnf2T7zk/2015-14.jpg",
+        "stock" : 10,
+        "qty" : 0
+    },
+    {
+        "id": 8,
+        "category" : "dibujo",
+        "title": "Dibujo 3",
+        "description": "Lorem ipsum",
+        "price": 55,
+        "pictureUrl": "https://i.postimg.cc/ZRsHDQy3/2015-4.jpg",
+        "stock" : 10,
+        "qty" : 0
+    },
+    {
+        "id": 9,
+        "category" : "dibujo",
+        "title": "Dibujo 4",
+        "description": "Lorem ipsum",
+        "price": 125,
+        "pictureUrl": "https://i.postimg.cc/RC8G7jmx/IMG-3501.jpg",
+        "stock" : 10,
+        "qty" : 0
+    },
+    {
+        "id": 10,
+        "category" : "dibujo",
+        "title": "Dibujo 5",
+        "description": "Lorem ipsum",
+        "price": 165,
+        "pictureUrl": "https://i.postimg.cc/661bH8dS/1987-a-5.jpg",
+        "stock" : 10,
+        "qty" : 0
     }
 ]

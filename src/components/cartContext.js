@@ -8,24 +8,75 @@ const { Provider } = cartContext
 const CustomComponent = ({ children }) => {
 
     const [cart, setCart] = useState([])
+    const [quantity, setQuantity] = useState(0)
 
     const addToCart = (product, amount) => {
 
-        const findDuplicate = cart.find(e => e.id === product.id)
+        const findIfExist = cart.find(e => e.id === product.id)
 
-        if (findDuplicate == null) {
-            setCart([product])
+        const cartArray = cart
+
+        let cartFilter
+
+        setQuantity(quantity + amount)
+
+
+        if (findIfExist == null) {
+
+            product.qty = amount
+
+            cartArray.push(product)
+
+            setCart(cartArray)
+
 
         } else {
-            alert("El producto ya se encuentra en el carrito")
+
+            cartFilter = cartArray.filter(exist)
+
+            function exist(prod) {
+                return prod.id !== findIfExist.id
+            }
+
+            findIfExist.qty = findIfExist.qty + amount
+
+            cartFilter.push(findIfExist)
+
+            setCart(cartFilter)
+
         }
+
     }
 
+    const removeFromCart = (product) => {
+
+        const findIfExist = cart.find(e => e.id === product.id)
+        let cartFilter
+
+        setQuantity(quantity - product.qty)
+
+        cartFilter = cart.filter(exist)
+
+        function exist(prod) {
+            return prod.id !== findIfExist.id
+        }
+
+        setCart(cartFilter)
+
+    }
+
+    const clear = () => {
+        setCart([]) 
+        setQuantity(0)
+    }
 
 
     const contextValue = {
         cart: cart,
-        addToCart: addToCart
+        addToCart: addToCart,
+        quantity: quantity,
+        removeFromCart: removeFromCart,
+        clear: clear
     }
 
     return (
@@ -41,21 +92,3 @@ export default CustomComponent
 
 
 
-// const isInCart = (id) => {
-//     return cart.find(item => item.id === id)
-// }
-
-// const addToCart = (id, branch, title, pictureUrl, qty, price) => {
-
-//     if (isInCart(id)) {
-//         setCart(cart.map(item => {
-//             if (item.id === id) {
-//                 item.qty += qty
-//             }
-//             return item
-//         }))
-//     }
-//     else {
-//         setCart([...cart, {id, branch, title, pictureUrl, qty, price}])
-//     }
-// }

@@ -1,17 +1,28 @@
 import { BsCart } from 'react-icons/bs'
-import { useContext } from 'react'
-import { cartContext } from './cartContext'
+import { Link } from 'react-router-dom'
 
-const CartWidget = () => {
 
-    const { cart } = useContext(cartContext)
-    
+const CartWidget = ({ counter }) => {
+
+    let mostrar = false
+
+    if (counter > 0) {
+        mostrar = true
+    }
 
     return (
         <>
-            <BsCart />
+            <Link to="/cart" exact><BsCart /></Link>
+            {mostrar && <span>{counter}</span>}
         </>
     )
 }
 
 export default CartWidget
+
+
+
+
+
+
+

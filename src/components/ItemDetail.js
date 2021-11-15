@@ -8,7 +8,7 @@ import { cartContext } from './cartContext'
 const ItemDetail = ({ productDetail }) => {
 
     const [stock, setStock] = useState(10)
-    const [visible, setVisible] = useState(true)
+    const [visible, setVisible] = useState(false)
 
     const { addToCart } = useContext(cartContext)
     
@@ -16,12 +16,10 @@ const ItemDetail = ({ productDetail }) => {
         if (stock >= amount) {
 
             setStock(stock - amount)
-            setVisible(false)
+            setVisible(true)
 
             addToCart(productDetail, amount)
         }
-
-
     }
 
     if (productDetail.length === 0) {
@@ -40,13 +38,13 @@ const ItemDetail = ({ productDetail }) => {
                 <div className="d-flex">
                     <div className="text-white bg-dark d-flex flex-column mt-4 mx-4 align-items-center card">
                         <div className="card-header">{productDetail.title}</div>
-                        <img src={productDetail.pictureUrl} alt="Foto del producto" />
+                        <img className="cardImg" src={productDetail.pictureUrl} alt="Foto del producto" />
                         <div className="card-body d-flex flex-column align-items-center">
                             <span>Detalles: {productDetail.description}</span>
-                            <span>Precio: {productDetail.price}</span>
+                            <span>Precio: ${productDetail.price}</span>
                             <p>Stock {stock} unidades</p>
                         </div>
-                        <div className="p-3">
+                        <div>
                             <ItemCount stock={stock} initial={1} onAdd={amountFromCounter} visible={visible} />
                         </div>
                     </div>
