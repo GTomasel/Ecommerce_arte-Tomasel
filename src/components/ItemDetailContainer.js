@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from "./ItemDetail"
-import GetItems from "./GetItems"
+import { firestore } from "../firebase"
 
 
 const ItemDetailContainer = () => {
@@ -12,10 +12,19 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
 
-        GetItems.then((data) => {
-            const found = data.find(e => e.id === parseInt(id))
-            setProductDetail(found)
-        })
+        const promise = firestore.collection("productos").doc(id).get()
+
+        promise
+            .then(result => {
+
+                const producto = { ...result.data(), id: result.id }
+
+                setProductDetail(producto)
+
+            })
+            .catch(() => {
+                console.log("error")
+            })
 
     })
 

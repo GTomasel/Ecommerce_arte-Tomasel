@@ -24,3 +24,14 @@ const App = () => {
 }
 
 export default App
+
+
+
+
+// const promesa = collection.get()
+//     let prodsFirebase =[]
+//     promesa     
+//       .then((documento) => {
+//         documento.forEach((doc) => {
+//           prodsFirebase.push(doc.data())
+//         })
