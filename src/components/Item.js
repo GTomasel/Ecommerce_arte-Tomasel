@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 const Item = ({ id, title, pictureUrl }) => {
 
     const linkDetail = "/item/" + id
-
+    
     return (
         <div className="card text-white bg-dark d-flex flex-column mx-4 align-items-center justify-content-between">
             <div className="card-header">{title}</div>
@@ -13,6 +13,7 @@ const Item = ({ id, title, pictureUrl }) => {
             </div>
         </div>
     )
+
 }
 
 export default Item

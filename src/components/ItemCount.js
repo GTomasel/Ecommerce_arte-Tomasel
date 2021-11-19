@@ -29,7 +29,7 @@ const ItemCount = ({ stock, initial, onAdd, visible }) => {
             <div className="d-flex flex-column align-items-center">
                 <button className="mb-4 px-1" onClick={() => onAdd(contador)}>Agregar al carrito</button>
 
-                {visible && <Link to="/cart" exact><button className="mb-2 px-1">Terminar la compra</button></Link>}
+                {visible && <Link to="/cart" exact><button className="mb-2 px-1">Ir al carrito</button></Link>}
 
                 <Link to="/" exact>
                     <p className="text-light">Volver</p>

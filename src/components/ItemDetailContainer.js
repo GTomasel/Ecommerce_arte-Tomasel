@@ -23,10 +23,10 @@ const ItemDetailContainer = () => {
 
             })
             .catch(() => {
-                console.log("error")
+                console.log("promise error")
             })
 
-    })
+    },[])
 
 
     return (
