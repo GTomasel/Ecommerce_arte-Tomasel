@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
                 console.log("promise error")
             })
 
-    },[])
+    },[id])
 
 
     return (

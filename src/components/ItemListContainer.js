@@ -6,9 +6,7 @@ import ItemList from "./ItemList"
 
 const ItemListContainer = () => {
 
-    //const { category } = useParams()
-
-    let category
+    const { category } = useParams()
 
     const [items, setItems] = useState([])
 
@@ -42,7 +40,7 @@ const ItemListContainer = () => {
                 console.log("promise error")
             })
             
-        },[])
+        },[category])
         
 
     return (
