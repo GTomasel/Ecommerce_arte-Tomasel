@@ -17,6 +17,7 @@ const App = () => {
                 <Route path="/category/:category" component={ItemListContainer} exact />
                 <Route path="/item/:id" component={ItemDetailContainer} exact />
                 <Route path="/cart" component={Cart} exact />
+                <Route path="/cart/checkout" component={Cart} exact />
                 <Footer />
             </CustomComponent>
         </BrowserRouter>

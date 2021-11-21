@@ -25,10 +25,10 @@ export default function ItemList({ items, category }) {
             <div className="mx-5">
                 <h1 className="mx-3 mb-4">Galería {category}</h1>
                 <div className="d-flex flex-wrap">
-                    {products.map((e, i) => {
+                    {products.map((e) => {
                         return (
                             <>
-                                <Item id={e.id} title={e.title} pictureUrl={e.pictureUrl} />
+                                <Item key={e.id} id={e.id} title={e.title} pictureUrl={e.pictureUrl}/>
                             </>
                         );
                     })}
