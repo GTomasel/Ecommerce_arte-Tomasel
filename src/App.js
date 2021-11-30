@@ -1,10 +1,10 @@
+import { BrowserRouter, Route } from "react-router-dom"
 import Header from "./Header"
 import Footer from "./Footer"
-import ItemListContainer from "./components/ItemListContainer"
-import ItemDetailContainer from "./components/ItemDetailContainer"
-import Cart from "./components/Cart"
-import CustomComponent from "./components/cartContext"
-import { BrowserRouter, Route } from "react-router-dom"
+import ItemListContainer from "./components/item_list/ItemListContainer"
+import ItemDetailContainer from "./components/item_detail/ItemDetailContainer"
+import Cart from "./components/cart/Cart"
+import CustomComponent from "./components/context/cartContext"
 
 
 const App = () => {
@@ -12,12 +12,14 @@ const App = () => {
     return (
         <BrowserRouter>
             <CustomComponent>
-                <Header nombre="" apellido="" />
-                <Route path="/" component={ItemListContainer} exact />
-                <Route path="/category/:category" component={ItemListContainer} exact />
-                <Route path="/item/:id" component={ItemDetailContainer} exact />
-                <Route path="/cart" component={Cart} exact />
-                <Route path="/cart/checkout" component={Cart} exact />
+                <div className="content">
+                    <Header nombre="" apellido="" />
+                    <Route path="/" component={ItemListContainer} exact />
+                    <Route path="/category/:category" component={ItemListContainer} exact />
+                    <Route path="/item/:id" component={ItemDetailContainer} exact />
+                    <Route path="/cart" component={Cart} exact />
+                    <Route path="/cart/checkout" component={Cart} exact />
+                </div>
                 <Footer />
             </CustomComponent>
         </BrowserRouter>

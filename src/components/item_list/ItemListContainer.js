@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { firestore } from "../firebase"
+import { firestore } from "../../scripts/firebase"
 import ItemList from "./ItemList"
 
 
@@ -9,6 +9,7 @@ const ItemListContainer = () => {
     const { category } = useParams()
 
     const [items, setItems] = useState([])
+    const [fetchError, setfetchError] = useState(false)
 
     useEffect(() => {
 
@@ -18,7 +19,7 @@ const ItemListContainer = () => {
 
         if (category != null) {
             promise = collection.where("category", "==", category).get()
-           
+
         } else {
             promise = collection.get()
         }
@@ -32,21 +33,19 @@ const ItemListContainer = () => {
                     const producto = { ...doc.data(), id: doc.id }
                     productos.push(producto)
                 })
-                
+
                 setItems(productos)
-                
+
             })
             .catch(() => {
-                console.log("promise error")
+                setfetchError(true)
             })
-            
-        },[category])
-        
+
+    }, [category])
+
 
     return (
-        <>
-            <ItemList items={items} category={category} />
-        </>
+        <ItemList items={items} category={category} error={fetchError} />
     )
 }
 

@@ -32,7 +32,7 @@ const ItemCount = ({ stock, initial, onAdd, visible }) => {
                 {visible && <Link to="/cart" exact><button className="mb-2 px-1">Ir al carrito</button></Link>}
 
                 <Link to="/" exact>
-                    <p className="text-light">Volver</p>
+                    <p className="text-light mt-1">Volver</p>
                 </Link>
             </div>
         </div>

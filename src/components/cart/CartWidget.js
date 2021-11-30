@@ -13,7 +13,7 @@ const CartWidget = ({ counter }) => {
     return (
         <>
             <Link to="/cart" exact><BsCart /></Link>
-            {mostrar && <span>{counter}</span>}
+            {mostrar && <span className="fs-6">{counter}</span>}
         </>
     )
 }

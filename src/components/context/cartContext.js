@@ -7,8 +7,17 @@ const { Provider } = cartContext
 
 const CustomComponent = ({ children }) => {
 
-    const [cart, setCart] = useState([])
-    const [quantity, setQuantity] = useState(0)
+    let cartFromLocalStorage = JSON.parse(localStorage.getItem("cart"))
+    let qtyFromLocalStorage = localStorage.getItem("cartQty")
+
+    if (cartFromLocalStorage === null){
+        cartFromLocalStorage = []
+        qtyFromLocalStorage = 0
+    }
+
+    const [cart, setCart] = useState(cartFromLocalStorage)
+    const [quantity, setQuantity] = useState(qtyFromLocalStorage)
+
 
     const addToCart = (product, amount) => {
 
@@ -19,6 +28,7 @@ const CustomComponent = ({ children }) => {
         let cartFilter
 
         setQuantity(quantity + amount)
+        localStorage.setItem("cartQty", quantity + amount)
 
 
         if (findIfExist == null) {
@@ -28,6 +38,8 @@ const CustomComponent = ({ children }) => {
             cartArray.push(product)
 
             setCart(cartArray)
+            let cartJSON = JSON.stringify(cartArray)
+            localStorage.setItem("cart", cartJSON)
 
 
         } else {
@@ -43,6 +55,8 @@ const CustomComponent = ({ children }) => {
             cartFilter.push(findIfExist)
 
             setCart(cartFilter)
+            let cartJSON = JSON.stringify(cartFilter)
+            localStorage.setItem("cart", cartJSON)
 
         }
 
@@ -54,6 +68,7 @@ const CustomComponent = ({ children }) => {
         let cartFilter
 
         setQuantity(quantity - product.qty)
+        localStorage.setItem("cartQty", quantity - product.qty)
 
         cartFilter = cart.filter(exist)
 
@@ -62,14 +77,16 @@ const CustomComponent = ({ children }) => {
         }
 
         setCart(cartFilter)
+        let cartJSON = JSON.stringify(cartFilter)
+        localStorage.setItem("cart", cartJSON)
 
     }
 
     const clear = () => {
-        setCart([]) 
+        setCart([])
         setQuantity(0)
+        localStorage.clear()
     }
-
 
     const contextValue = {
         cart: cart,

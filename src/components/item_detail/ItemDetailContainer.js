@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { firestore } from "../firebase"
+import { firestore } from "../../scripts/firebase"
 import ItemDetail from "./ItemDetail"
 
 
 const ItemDetailContainer = () => {
 
     const [productDetail, setProductDetail] = useState([])
+    const [fetchError, setfetchError] = useState(false)
 
     const { id } = useParams()
 
@@ -23,16 +24,14 @@ const ItemDetailContainer = () => {
 
             })
             .catch(() => {
-                console.log("promise error")
+                setfetchError(true)
             })
 
-    },[id])
+    }, [id])
 
 
     return (
-        <>
-            <ItemDetail productDetail={productDetail} />
-        </>
+        <ItemDetail productDetail={productDetail} error={fetchError} />
     )
 }
 
