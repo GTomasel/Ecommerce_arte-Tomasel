@@ -7,7 +7,7 @@ import ItemCount from "./ItemCount"
 import Loading from "../misc/Loading"
 
 
-const ItemDetail = ({ productDetail, error, inCart }) => {
+const ItemDetail = ({ productDetail, error, inCart, fadeInTime }) => {
 
     const [stock, setStock] = useState(10)
     const [visible, setVisible] = useState(false)
@@ -26,7 +26,7 @@ const ItemDetail = ({ productDetail, error, inCart }) => {
     const fadeIn = useSpring({
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: { opacity: 800 }
+        config: { opacity: fadeInTime }
     })
 
     if (productDetail.length === 0 && inCart === false) {

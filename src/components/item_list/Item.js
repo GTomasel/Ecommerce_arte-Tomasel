@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 
-const Item = ({ id, title, pictureUrl }) => {
+const Item = ({ id, title, pictureUrl, fadeInTime }) => {
 
     const linkDetail = "/item/" + id
 
     const fadeIn = useSpring({
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: { opacity: 800 }
+        config: { opacity: fadeInTime }
     })
 
     return (

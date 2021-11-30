@@ -31,7 +31,7 @@ const ItemDetailContainer = () => {
 
 
     return (
-        <ItemDetail productDetail={productDetail} error={fetchError} />
+        <ItemDetail productDetail={productDetail} error={fetchError} fadeInTime={800} />
     )
 }
 

@@ -13,14 +13,14 @@ const App = () => {
         <BrowserRouter>
             <CustomComponent>
                 <div className="content">
-                    <Header nombre="" apellido="" />
+                    <Header nombre="" apellido="" fadeInTime={1000} />
                     <Route path="/" component={ItemListContainer} exact />
                     <Route path="/category/:category" component={ItemListContainer} exact />
                     <Route path="/item/:id" component={ItemDetailContainer} exact />
                     <Route path="/cart" component={Cart} exact />
                     <Route path="/cart/checkout" component={Cart} exact />
                 </div>
-                <Footer />
+                <Footer fadeInTime={1000}/>
             </CustomComponent>
         </BrowserRouter>
     )

@@ -3,13 +3,13 @@ import { NavLink } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 
 
-const Header = ({ nombre, apellido }) => {
+const Header = ({ nombre, apellido, fadeInTime }) => {
 
 
     const fadeIn = useSpring({
         from: { opacity: 0 },
         to: { opacity: 1 },
-        config: { opacity: 1000 }
+        config: { opacity: fadeInTime }
     })
 
     return (

@@ -31,7 +31,7 @@ export default function ItemList({ items, category, error }) {
                 <div className="d-flex flex-wrap justify-content-center">
                     {products.map((e) => {
                         return (
-                            <Item key={e.id} id={e.id} title={e.title} pictureUrl={e.pictureUrl} />
+                            <Item key={e.id} id={e.id} title={e.title} pictureUrl={e.pictureUrl} fadeInTime={800} />
                         );
                     })}
                 </div>
