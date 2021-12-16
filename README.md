@@ -6,7 +6,7 @@
 ![Firebase badget](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
 ![CSS badget](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 ![JS badget](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=blacke)
-![Build Pass](https://travis-ci.org/klugjo/hexo-autolinker.svg?branch=master)
+
 
 ![Logo](https://i.postimg.cc/cL0jLDgD/111.png)
 
